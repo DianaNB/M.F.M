@@ -1,4 +1,3 @@
-# M.F.M
 # Project Outline
 
 ## Overview
