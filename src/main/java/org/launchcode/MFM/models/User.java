@@ -15,10 +15,6 @@ public class User {
     @Size(min = 1, max =15)
     private String username;
 
-    @NotNull
-    @Size(min = 1, max = 15)
-    private String lastName;
-
     @Column(name = "email")
     private String email;
 
@@ -41,14 +37,6 @@ public class User {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
     }
 
     public String getEmail() {

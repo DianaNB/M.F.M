@@ -24,23 +24,20 @@ public class UserController {
 
     @RequestMapping(value = "/register", method = RequestMethod.GET)
     public String addUser(Model model) {
-        User user = new User();
-        model.addAttribute("user", user);
+        model.addAttribute(new User());
         model.addAttribute("title", "Register");
         return "/register";
     }
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)
-    public String addUser(Model model, @ModelAttribute @Valid User newUser, Errors errors) { //String verifyPassword) { model.addAttribute(user);
+    public String addUser(Model model, @ModelAttribute @Valid User newUser, Errors errors, String verify) { //String verifyPassword) { model.addAttribute(user);
+        model.addAttribute(newUser);
         if (errors.hasErrors()) {
-//            model.addAttribute("verifyPasswordError", "Passwords must match");
+            model.addAttribute("title", "Register");
             return "/register";
         }
-        return "redirect:";
-//        } else {
-//            userDao.save(user);
-//            int id = user.getId();
-//            return "redirect:view/" + user.getId();
+        userDao.save(newUser);
+        return "redirect:/home";
 
     }
     @RequestMapping(value = "/", method = RequestMethod.GET)
