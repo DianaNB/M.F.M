@@ -84,5 +84,8 @@ public class User {
         }
     }
 
-    //have to get and set the about themselves portion of the form
+    public boolean isMatchingPassword(String password) {
+        return Boolean.parseBoolean("redirect:/");
+
+    }
 }
