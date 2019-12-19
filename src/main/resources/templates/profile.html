@@ -7,4 +7,30 @@
 <body>
 
 </body>
+</html><!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"></html>
+<!--      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">-->
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <title>Spring Security Example </title>
+</head>
+<body>
+<header th:replace="fragments :: header"></header>
+<h1 th:text="${title}">Default Title</h1>
+<div th:if="${param.error}">
+    Invalid username and password.
+</div>
+<div th:if="${param.logout}">
+    You have been logged out.
+</div>
+<div class="topnav">
+    <a class="active" href="/profile">My Profile</a>
+    <a href="/search">Search</a>
+    <a href="/about">About</a>
+    <a href="/playlist">Playlists</a>
+    <a href="/home">Logout</a>
+</div>
+
+</body>
 </html>

@@ -20,7 +20,7 @@ public class User {
 
     @Column(name = "password")
     @NotNull
-    @Size(min = 8, max = 20)
+    @Size(min = 5, max = 20)
     private String password;
 
     @NotNull
@@ -73,7 +73,7 @@ public class User {
     }
 
     public boolean isMatchingPassword(String password) {
-        return Boolean.parseBoolean("redirect:/");
+        return Boolean.parseBoolean("redirect:/profile");
 
     }
 }
