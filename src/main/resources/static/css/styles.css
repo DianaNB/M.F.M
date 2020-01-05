@@ -1,15 +1,21 @@
 body {
     /*font-family: sans-serif;*/
     font-family: 'Courier Prime', monospace;
-    background-color: #midnight;
+    background-color: #magenta;
     /*background-color: #d66f50;*/
     /*background-image: url("https://www.instagram.com/p/BuzdqSJB4hW");*/
 }
+
+td {
+margin: 25px;
+}
+
 nav {
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
     }
+
 .table {
     border-collapse: collapse;
     width: 100%;
